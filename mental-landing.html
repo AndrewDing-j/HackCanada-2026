@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Vivirion Mental Health Support — find tailored mental health professionals, take a guided check-in, and access trusted resources. Confidential, evidence-informed, and matched to you." />
+  <title>Vi Well - Taking Your Mental Snapshot | Vivirion Solutions Inc. </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="mental-health.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       PERSISTENT CRISIS WIDGET
+  ============================================================ -->
+  <div id="crisis-widget" class="crisis-widget" role="complementary" aria-label="Crisis support resources">
+    <button id="crisis-toggle" class="crisis-toggle" aria-expanded="false" aria-controls="crisis-panel">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+          fill="currentColor" />
+      </svg>
+      <span>Crisis Help</span>
+    </button>
+    <div id="crisis-panel" class="crisis-panel" role="region" aria-label="Crisis resources" hidden>
+      <p class="crisis-panel__intro">If you are in immediate danger, please reach out now:</p>
+      <ul class="crisis-panel__list">
+        <li>
+          <strong>988 Suicide &amp; Crisis Lifeline</strong>
+          <span>Call or text <a href="tel:988" aria-label="Call 988 Suicide and Crisis Lifeline">988</a> (US)</span>
+        </li>
+        <li>
+          <strong>Crisis Text Line</strong>
+          <span>Text <strong>HOME</strong> to <a href="sms:741741"
+              aria-label="Text HOME to Crisis Text Line at 741741">741741</a></span>
+        </li>
+        <li>
+          <strong>Emergency Services</strong>
+          <span>Call <a href="tel:911" aria-label="Call 911">911</a>, <a href="tel:999">999</a>, or <a
+              href="tel:112">112</a></span>
+        </li>
+        <li>
+          <strong>International Resources</strong>
+          <span><a href="https://www.findahelpline.com" target="_blank"
+              rel="noopener noreferrer">findahelpline.com</a></span>
+        </li>
+      </ul>
+      <p class="crisis-panel__note">You don't need to share your name. Support is available 24/7.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       NAVIGATION BAR
+  ============================================================ -->
+  <header class="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="/" class="nav-logo" aria-label="Vivirion home">
+        <svg class="nav-logo__leaf" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <ellipse cx="18" cy="22" rx="11" ry="13" fill="#2d9b6f" opacity="0.9" />
+          <ellipse cx="22" cy="14" rx="9" ry="11" fill="#4cbb8a" opacity="0.85" transform="rotate(20 22 14)" />
+          <line x1="18" y1="34" x2="18" y2="10" stroke="#1a6645" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+        <div class="nav-logo__text-group">
+          <span class="nav-logo__text">Vi - Well</span>
+          <span class="nav-logo__tagline">Navigate. Support. Care.</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="https://vivirion.com/">Home</a></li>
+        <li><a href="https://vivirion.com/vi-learn">Vi Learn</a></li>
+        <li><a href="https://vivirion.com/vi-connect">Vi Connect</a></li>
+        <li><a href="https://vivirion.com/vi-nav">Vi Nav</a></li>
+        <li><a href="mental-snapshot.html" aria-current="page" class="nav-links__active">Vi Well</a></li>
+        <li><a href="find-pros.html">Vi MindHelp</a></li>
+        <li><a href="https://vivirion.com/contact">Contact Us</a></li>
+      </ul>
+      <div class="nav-auth">
+        <a href="/login" class="btn-nav-login">Log In</a>
+        <a href="/signup" class="btn-nav-signup">Sign Up</a>
+      </div>
+      <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div id="mobile-nav" class="mobile-nav" hidden aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="https://vivirion.com/">Home</a></li>
+        <li><a href="https://vivirion.com/vi-learn">Vi Learn</a></li>
+        <li><a href="https://vivirion.com/vi-connect">Vi Connect</a></li>
+        <li><a href="https://vivirion.com/vi-nav">Vi Nav</a></li>
+        <li><a href="mental-snapshot.html" aria-current="page">Vi Well</a></li>
+        <li><a href="find-pros.html">Vi MindHelp</a></li>
+        <li><a href="https://vivirion.com/contact">Contact Us</a></li>
+        <li><a href="https://vivirion.com/login">Log In</a></li>
+        <li><a href="https://vivirion.com/signup" class="nav-links__active">Sign Up</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         SECTION 1 — HERO
+    ============================================================ -->
+    <section id="hero" class="hero" aria-labelledby="hero-headline">
+      <div class="hero__content container">
+        <p class="hero__eyebrow fade-in-stagger" style="--delay: 0s">Vi Well — Mental Health Support</p>
+        <h1 id="hero-headline" class="hero__headline fade-in-stagger" style="--delay: 0.15s">
+          Take a Snapshot of<br /><span class="hero__headline--accent">Your Mental Health</span>
+        </h1>
+        <p class="hero__subheadline fade-in-stagger" style="--delay: 0.3s">
+          Vivirion connects you with the right mental health support — guided by how <em>you</em> feel, tailored to what
+          <em>you</em> need.
+        </p>
+        <div class="hero__ctas fade-in-stagger" style="--delay: 0.45s">
+          <a href="find-pros.html" class="btn btn--primary" id="hero-cta-assessment">
+            Find a Professional
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+        <div class="trust-strip fade-in-stagger" role="list" style="--delay: 0.6s" aria-label="Trust signals">
+          <div class="trust-strip__item" role="listitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Confidential
+          </div>
+          <div class="trust-strip__divider" aria-hidden="true">·</div>
+          <div class="trust-strip__item" role="listitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Evidence-Informed
+          </div>
+          <div class="trust-strip__divider" aria-hidden="true">·</div>
+          <div class="trust-strip__item" role="listitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Matched to You
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 3 — AI ASSESSMENT MODULE
+    ============================================================ -->
+    <section id="assessment" class="assessment-section" aria-labelledby="assessment-headline">
+      <div class="container">
+        <div class="assessment-header">
+          <span class="eyebrow">Guided Check-In</span>
+          <h2 id="assessment-headline">How Are You Doing?</h2>
+          <p>This is a safe, private space to reflect on how you've been feeling. There are no wrong answers — take your
+            time.</p>
+          <ul class="assessment-meta" aria-label="Assessment information" role="list">
+            <li role="listitem"> About 3–5 minutes</li>
+            <li role="listitem"> Private by default</li>
+            <li role="listitem"> Not a medical diagnosis</li>
+          </ul>
+        </div>
+
+        <div class="assessment-card" id="assessment-card" role="region" aria-label="Mental health assessment">
+          <!-- Progress Bar -->
+          <div class="assessment-progress" role="progressbar" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"
+            aria-label="Assessment progress">
+            <div class="assessment-progress__bar" id="progress-bar"></div>
+            <span class="assessment-progress__label" id="progress-label" aria-live="polite">Step 1 of 6</span>
+          </div>
+
+          <!-- Assessment Screens Container -->
+          <div class="assessment-screens" id="assessment-screens">
+
+            <!-- Screen 1 — Emotional Check-In -->
+            <div class="assessment-screen active" data-screen="1" role="group" aria-labelledby="screen1-question">
+              <p class="assessment-screen__question" id="screen1-question">How have you been feeling lately, overall?
+              </p>
+              <p class="assessment-screen__subtext">Select all that apply — you can choose more than one.</p>
+              <div class="assessment-options assessment-options--multi" data-field="mood" role="group"
+                aria-labelledby="screen1-question">
+                <button class="option-btn" data-value="anxious" aria-pressed="false"> Anxious</button>
+                <button class="option-btn" data-value="low_depressed" aria-pressed="false"> Low or depressed</button>
+                <button class="option-btn" data-value="overwhelmed" aria-pressed="false"> Overwhelmed</button>
+                <button class="option-btn" data-value="disconnected" aria-pressed="false"> Disconnected</button>
+                <button class="option-btn" data-value="burnt_out" aria-pressed="false"> Burnt out</button>
+                <button class="option-btn" data-value="not_sure" aria-pressed="false"> Not sure</button>
+                <button class="option-btn" data-value="mixed" aria-pressed="false"> A mix of things</button>
+              </div>
+              <div class="assessment-nav">
+                <span></span>
+                <button class="btn btn--primary" id="next-1" data-next="2"
+                  aria-label="Continue to next question">Continue</button>
+              </div>
+            </div>
+
+            <!-- Screen 2 — Duration -->
+            <div class="assessment-screen" data-screen="2" role="group" aria-labelledby="screen2-question">
+              <p class="assessment-screen__question" id="screen2-question">How long have you been feeling this way?</p>
+              <p class="assessment-screen__subtext">Choose the option that feels closest.</p>
+              <div class="assessment-options assessment-options--single" data-field="duration" role="group"
+                aria-labelledby="screen2-question">
+                <button class="option-btn" data-value="few_days" aria-pressed="false">A few days</button>
+                <button class="option-btn" data-value="few_weeks" aria-pressed="false">A few weeks</button>
+                <button class="option-btn" data-value="few_months" aria-pressed="false">A few months</button>
+                <button class="option-btn" data-value="six_plus_months" aria-pressed="false">Longer than 6
+                  months</button>
+                <button class="option-btn" data-value="comes_and_goes" aria-pressed="false">It comes and goes</button>
+              </div>
+              <div class="assessment-nav">
+                <button class="btn btn--ghost" data-prev="1" aria-label="Go back to previous question">← Back</button>
+                <button class="btn btn--primary" data-next="3" aria-label="Continue to next question">Continue</button>
+              </div>
+            </div>
+
+            <!-- Screen 3 — Impact -->
+            <div class="assessment-screen" data-screen="3" role="group" aria-labelledby="screen3-question">
+              <p class="assessment-screen__question" id="screen3-question">Is this affecting your daily life?</p>
+              <p class="assessment-screen__subtext">Select all that apply.</p>
+              <div class="assessment-options assessment-options--multi" data-field="impact" role="group"
+                aria-labelledby="screen3-question">
+                <button class="option-btn" data-value="sleep" aria-pressed="false"> Sleep</button>
+                <button class="option-btn" data-value="work_study" aria-pressed="false"> Work or study</button>
+                <button class="option-btn" data-value="relationships" aria-pressed="false"> Relationships</button>
+                <button class="option-btn" data-value="appetite" aria-pressed="false"> Appetite</button>
+                <button class="option-btn" data-value="motivation" aria-pressed="false"> Motivation</button>
+                <button class="option-btn" data-value="concentration" aria-pressed="false"> Concentration</button>
+                <button class="option-btn" data-value="physical_health" aria-pressed="false"> Physical health</button>
+                <button class="option-btn" data-value="managing_okay" aria-pressed="false"> I'm managing okay</button>
+              </div>
+              <div class="assessment-nav">
+                <button class="btn btn--ghost" data-prev="2" aria-label="Go back to previous question">← Back</button>
+                <button class="btn btn--primary" data-next="4" aria-label="Continue to next question">Continue</button>
+              </div>
+            </div>
+
+            <!-- Screen 4 — Support History -->
+            <div class="assessment-screen" data-screen="4" role="group" aria-labelledby="screen4-question">
+              <p class="assessment-screen__question" id="screen4-question">Have you spoken to a professional about this
+                before?</p>
+              <p class="assessment-screen__subtext">Whatever your answer, you're in the right place.</p>
+              <div class="assessment-options assessment-options--single" data-field="history" role="group"
+                aria-labelledby="screen4-question">
+                <button class="option-btn" data-value="never" aria-pressed="false">Never — this is my first
+                  time</button>
+                <button class="option-btn" data-value="past" aria-pressed="false">Yes, in the past</button>
+                <button class="option-btn" data-value="current" aria-pressed="false">Currently seeing someone</button>
+                <button class="option-btn" data-value="tried_didnt_help" aria-pressed="false">I tried, but it didn't
+                  help</button>
+                <button class="option-btn" data-value="not_sure_where_start" aria-pressed="false">Not sure where to
+                  start</button>
+              </div>
+              <div class="assessment-nav">
+                <button class="btn btn--ghost" data-prev="3" aria-label="Go back to previous question">← Back</button>
+                <button class="btn btn--primary" data-next="5" aria-label="Continue to next question">Continue</button>
+              </div>
+            </div>
+
+            <!-- Screen 5 — What You're Looking For -->
+            <div class="assessment-screen" data-screen="5" role="group" aria-labelledby="screen5-question">
+              <p class="assessment-screen__question" id="screen5-question">What kind of support feels right for you
+                right now?</p>
+              <p class="assessment-screen__subtext">Select all that you're drawn to — there's no pressure.</p>
+              <div class="assessment-options assessment-options--multi" data-field="support_type" role="group"
+                aria-labelledby="screen5-question">
+                <button class="option-btn" data-value="talk" aria-pressed="false"> Someone to talk to</button>
+                <button class="option-btn" data-value="strategies" aria-pressed="false"> Practical strategies</button>
+                <button class="option-btn" data-value="medication" aria-pressed="false"> Medication guidance</button>
+                <button class="option-btn" data-value="crisis" aria-pressed="false"> Crisis support</button>
+                <button class="option-btn" data-value="dont_know" aria-pressed="false"> I don't know yet</button>
+                <button class="option-btn" data-value="understand" aria-pressed="false"> Just want to understand what
+                  I'm feeling</button>
+              </div>
+              <div class="assessment-nav">
+                <button class="btn btn--ghost" data-prev="4" aria-label="Go back to previous question">← Back</button>
+                <button class="btn btn--primary" data-next="6" aria-label="Continue to next question">Continue</button>
+              </div>
+            </div>
+
+            <!-- Screen 6 — Safe Space Check -->
+            <div class="assessment-screen" data-screen="6" role="group" aria-labelledby="screen6-question">
+              <p class="assessment-screen__question" id="screen6-question">Are you currently having thoughts of harming
+                yourself or others?</p>
+              <div class="assessment-screen__care-note" role="note">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-11v5m0-8v1"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <span>It's safe to answer honestly. This won't trigger any automatic actions. Your wellbeing is what
+                  matters.</span>
+              </div>
+              <div class="assessment-options assessment-options--single" data-field="safety" role="group"
+                aria-labelledby="screen6-question">
+                <button class="option-btn" data-value="no" aria-pressed="false">No, I'm not having those
+                  thoughts</button>
+                <button class="option-btn option-btn--sensitive" data-value="sometimes" aria-pressed="false">Sometimes /
+                  in the past</button>
+                <button class="option-btn option-btn--sensitive" data-value="yes_now" aria-pressed="false">Yes, right
+                  now</button>
+              </div>
+              <!-- Crisis Resources — shown inline when triggered -->
+              <div class="crisis-inline" id="crisis-inline" hidden role="alert" aria-live="assertive"
+                aria-atomic="true">
+                <div class="crisis-inline__header">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-11v5m0-8v1"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                  <p id="crisis-inline-message">Thank you for telling us. Please reach out to one of these right now —
+                    support is available 24/7.</p>
+                </div>
+                <ul class="crisis-inline__list">
+                  <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <a href="tel:988">988</a></li>
+                  <li><strong>Crisis Text Line:</strong> Text HOME to <a href="sms:741741">741741</a></li>
+                  <li><strong>Emergency Services:</strong> Call <a href="tel:911">911</a>, <a href="tel:999">999</a>, or
+                    <a href="tel:112">112</a>
+                  </li>
+                  <li><strong>International:</strong> <a href="https://www.findahelpline.com" target="_blank"
+                      rel="noopener noreferrer">findahelpline.com</a></li>
+                </ul>
+              </div>
+              <div class="assessment-nav" id="screen6-nav">
+                <button class="btn btn--ghost" data-prev="5" aria-label="Go back to previous question">← Back</button>
+                <button class="btn btn--primary" id="submit-assessment" aria-label="Get my results">Get My
+                  Results</button>
+              </div>
+            </div>
+
+            <!-- RESULTS SCREEN -->
+            <div class="assessment-screen assessment-screen--results" data-screen="results" role="region"
+              aria-labelledby="results-headline" aria-live="polite">
+              <div class="results-loading" id="results-loading" aria-label="Generating your personalized summary"
+                role="status">
+                <div class="loading-spinner" aria-hidden="true"></div>
+                <p>Creating your personal snapshot…</p>
+              </div>
+              <div class="results-content" id="results-content" hidden>
+                <div class="results-badge" id="results-badge" aria-label="Results indicator"></div>
+                <h3 id="results-headline" class="results-headline">Your Personal Snapshot</h3>
+                <div class="results-summary" id="results-summary" aria-live="polite"></div>
+                <div class="results-label" id="results-label" aria-label="Informational pattern indicator"></div>
+                <div class="results-recommendation" id="results-recommendation"></div>
+                <p class="results-disclaimer" role="note">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-11v5m0-8v1"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                  <strong>Important:</strong> This is not a medical diagnosis. These results are for reflection only and
+                  may not fully capture your experience. Please consult a qualified healthcare professional for clinical
+                  guidance.
+                </p>
+                <div class="results-ctas">
+                  <a href="find-pros.html" class="btn btn--primary" id="results-cta-match">Match Me With a Professional</a>
+                  <a href="find-pros.html/resources" class="btn btn--secondary" id="results-cta-resources">Explore Self-Help
+                    Resources</a>
+                </div>
+                <button class="btn btn--ghost retake-btn" id="retake-assessment">Retake Assessment</button>
+              </div>
+            </div>
+
+          </div><!-- /assessment-screens -->
+        </div><!-- /assessment-card -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       SITE FOOTER
+  ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container site-footer__inner">
+      <div class="site-footer__col">
+        <h4 class="site-footer__heading">Explore</h4>
+        <ul role="list">
+          <li><a href="https://vivirion.com/">Home</a></li>
+          <li><a href="https://vivirion.com/vi-connect">Vi Connect</a></li>
+          <li><a href="https://vivirion.com/vi-learn">Vi Learn</a></li>
+          <li><a href="https://vivirion.com/vi-nav">Vi Nav</a></li>
+          <li><a href="mental-snapshot.html">Vi Well</a></li>
+          <li><a href="find-pros.html">Vi MindHelp</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__heading">Legal</h4>
+        <ul role="list">
+          <li><a href="https://vivirion.com/privacy-policy">Privacy Policy</a></li>
+          <li><a href="https://vivirion.com/corporate-policy">Corporate Policy</a></li>
+          <li><a href="https://vivirion.com/terms-of-service">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__heading">Need help?</h4>
+        <ul role="list" class="site-footer__contact">
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+              <path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <a href="/faq">F.A.Q.</a>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+            <a href="tel:4164246633">(416) 424-6633</a>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+            <a href="mailto:info@vivirion.com">info@vivirion.com</a>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+            <span>12-9275 Markham Road, Suite 159<br />Markham, ON L6E 0H9<br />Canada</span>
+          </li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__heading">Connect with us</h4>
+        <div class="site-footer__social">
+          <a href="https://instagram.com/vivirion" aria-label="Vivirion on Instagram" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8" />
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+            </svg>
+          </a>
+          <a href="https://facebook.com/vivirion" aria-label="Vivirion on Facebook" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor"
+                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com/company/vivirion" aria-label="Vivirion on LinkedIn" target="_blank"
+            rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.8" />
+            </svg>
+          </a>
+        </div>
+        <div class="site-footer__subscribe">
+          <p>Stay up to date for our latest offers and products:</p>
+          <form class="subscribe-form" aria-label="Email newsletter signup" onsubmit="return false;">
+            <input type="email" placeholder="Enter your email" class="subscribe-input"
+              aria-label="Email address for newsletter" />
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom container">
+      <div class="site-footer__bottom-brand">
+        <svg width="30" height="30" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <ellipse cx="18" cy="22" rx="11" ry="13" fill="#2d9b6f" opacity="0.9" />
+          <ellipse cx="22" cy="14" rx="9" ry="11" fill="#4cbb8a" opacity="0.8" transform="rotate(20 22 14)" />
+          <line x1="18" y1="34" x2="18" y2="10" stroke="#1a6645" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+        <div>
+          <p class="site-footer__brand-name">Vivirion Solutions Inc.</p>
+          <p class="site-footer__brand-tag">Transforming Care. Inspiring Change.</p>
+        </div>
+      </div>
+      <p class="site-footer__copy">© 2026. All rights reserved. <span>Vi Well - Connect is a subsidiary of Vivirion
+          Solutions Inc.</span></p>
+    </div>
+    <p class="site-footer__disclaimer container" role="note">Vi Well provides general informational guidance only and is
+      not a substitute for professional medical advice, diagnosis, or treatment. Vivirion Solutions is not responsible
+      for the accuracy of AI-generated content or third-party resources. By using this tool you agree to our <a
+        href="/terms">Terms of Use</a>, <a href="/privacy">Privacy Policy</a>, and <a href="/corporate-policy">Corporate
+        Policy</a>.</p>
+  </footer>
+
+  <script src="mental-health.js"></script>
+</body>
+</html>

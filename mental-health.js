@@ -238,14 +238,19 @@ function setupNavButtons() {
 
 /* ── SUBMIT ASSESSMENT ─────────────────────────────────────── */
 async function submitAssessment() {
+  // Determine concern band before transitioning
+  const band = calculateBand(answers);
+
+  // Navigate to the results screen first
   showScreen('results', 'forward');
+
+  // Wait for the screen transition (240ms) to complete before touching the DOM
+  await new Promise(resolve => setTimeout(resolve, 260));
+
   const loading = document.getElementById('results-loading');
   const content = document.getElementById('results-content');
   if (loading) loading.removeAttribute('hidden');
   if (content) content.setAttribute('hidden', '');
-
-  // Determine concern band
-  const band = calculateBand(answers);
 
   try {
     const summary = await fetchAISummary(answers, band);

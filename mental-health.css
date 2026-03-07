@@ -32,8 +32,9 @@
   --clr-white: #ffffff;
   --clr-border: #d8e8e7;
 
-  --font-serif: 'Lora', Georgia, serif;
+  --font-heading: 'Sora', 'Segoe UI', sans-serif;
   --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
 
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -63,6 +64,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 html {
@@ -117,9 +122,9 @@ ul {
 
 .eyebrow {
   display: inline-block;
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--clr-teal-600);

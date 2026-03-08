@@ -339,7 +339,7 @@ ul {
   z-index: 500;
   background: rgba(253, 252, 250, 0.92);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--clr-border);
+  border-bottom: 2.5px solid #000000;
 }
 
 .nav-container {
@@ -2187,9 +2187,15 @@ ul {
   background: var(--clr-white);
   border-radius: var(--radius-xl);
   padding: 2rem;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, .08);
   border: 1px solid var(--clr-border);
   position: relative;
+  transition: transform var(--transition), box-shadow var(--transition), box-shadow var(--transition);
+}
+
+.mockup-card:hover {
+  transform: translate(-8px,8px);
+  box-shadow: 24px 24px 0 rgba(0, 0, 0, .12), 12px 12px 5px rgba(0, 0, 0, .06);;
 }
 
 .mockup-progress {
@@ -2267,10 +2273,11 @@ ul {
 }
 
 .chat-bubble--ai {
-  background: var(--clr-teal-100);
+  background: var(--clr-white);
   color: var(--clr-teal-900);
-  border-bottom-left-radius: 4px;
   align-self: flex-start;
+  border: 2px #000000;
+
 }
 
 .chat-bubble--user {

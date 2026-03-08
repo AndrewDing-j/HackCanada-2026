@@ -32,7 +32,7 @@
   --clr-warning-bg: #fef9ec;
   --clr-white: #ffffff;
   --clr-border: #d8e8e7;
-  --clr-green: #528f47;
+  --clr-green: #61a255;
 
   --font-heading: 'Poppins', 'Sora', 'Segoe UI', sans-serif;
   --font-sans: 'Inter', system-ui, sans-serif;
@@ -45,9 +45,9 @@
   --radius-xl: 32px;
   --radius-full: 9999px;
 
-  --shadow-sm: 0 1px 4px rgba(0, 0, 0, .06), 0 2px 8px rgba(0, 0, 0, .04);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, .08), 0 2px 6px rgba(0, 0, 0, .05);
-  --shadow-lg: 0 12px 40px rgba(0, 0, 0, .12), 0 4px 12px rgba(0, 0, 0, .06);
+  --shadow-sm: 0 4px 0 rgba(0, 0, 0, .06), 0 6px 0 rgba(0, 0, 0, .04);
+  --shadow-md: 0 8px 0 rgba(0, 0, 0, .08), 0 4px 0 rgba(0, 0, 0, .05);
+  --shadow-lg: 0 24px 0px rgba(0, 0, 0, .12), 0 12px 5px rgba(0, 0, 0, .06);
 
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -104,13 +104,13 @@ a:hover {
 
 a:focus-visible {
   outline: 3px solid var(--clr-teal-500);
-  outline-offset: 3px;
+  outline-offset: 1px;
   border-radius: 2px;
 }
 
 button:focus-visible {
   outline: 3px solid var(--clr-teal-500);
-  outline-offset: 3px;
+  outline-offset: 1px;
 }
 
 ul {
@@ -626,13 +626,13 @@ ul {
   padding: 1.5rem 1rem;
   background: var(--clr-white);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   border: 1px solid var(--clr-border);
   transition: box-shadow var(--transition), transform var(--transition);
 }
 
 .step:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
 }
 

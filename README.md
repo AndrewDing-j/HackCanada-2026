@@ -1,8 +1,10 @@
 # Vi-Well
-A new section for the vivirion website. Vi-Well is an AI-powered mental health resource that helps users connect with suitable mental health professionals and external resources.
+The Vi-Well package contains three new sections for the Vivirion website: an AI-powered mental health resource, a place where users can make informed decisions finding their personal mental health professional, and a landing page to sell the experience to those looking for help.
+----------------------------
+OUR PROCESS:
+----------------------------
 
-
-Update 1: Used Antigravity to create a website for Vi-Well with this prompt:
+Update 1: Used a multi-layered prompt generation process to create a prompt for Antigravity to create a website for Vi-Well. Our initial prompt was:
 
 
 ----------------------------
@@ -20,8 +22,9 @@ BRAND CONTEXT:
 
 ---
 
-PAGE SECTIONS TO BUILD:
+PAGES & SECTIONS TO BUILD:
 
+ASSESSMENT PAGE:
 1. HERO SECTION
    - Headline: "You Don't Have to Navigate This Alone"
    - Subheading: A one-liner about Vivirion connecting patients with the right mental health support, tailored to them
@@ -73,6 +76,7 @@ PAGE SECTIONS TO BUILD:
    - Recommended next step (e.g., "We recommend connecting with one of our licensed therapists who specializes in anxiety and work-related stress")
    - Two CTAs: "Match Me With a Professional" and "Explore Self-Help Resources"
 
+PROFESSIONAL MATCHING & RESOURCES PAGE:
 4. PROFESSIONAL MATCHING MODULE
    - Triggered from the assessment results OR accessible standalone via "Find a Professional" CTA
    - Display 3–4 Vivirion-affiliated professional cards (placeholder data for now) showing:
@@ -102,19 +106,14 @@ PAGE SECTIONS TO BUILD:
    Below: 2–3 short anonymous patient quotes (placeholder) in a carousel or static layout
    Keep this section visually distinct — warmer, softer, more human than the rest of the page
 
-7. FOOTER CTA BANNER
-   "Ready to take the first step?"
-   Subtext: "Our team is here. Whether you need a conversation, a referral, or just somewhere to start — Vivirion has you covered."
-   CTA: "Get Started Today" → links to assessment module
-
 ---
 
 DESIGN & UX REQUIREMENTS:
 - Mobile-first, fully responsive
 - Assessment module must feel conversational — animate between screens with a smooth slide/fade, show a progress bar at top
-- All AI-generated result text must include a disclaimer: "This is not a medical diagnosis. Please consult a qualified professional."
+- All AI-generated result text include a disclaimer: "This is not a medical diagnosis. Please consult a qualified professional."
 - WCAG AA accessibility compliance (contrast, focus states, aria labels)
-- Crisis detection in Screen 6 must be fail-safe — never skip or hide the resources if triggered
+- Crisis detection in Screen 6 is never skipped or hidden; resources are always displayed if triggered
 - Smooth anchor navigation from hero CTAs to relevant sections
 - Page should load with a subtle fade-in stagger on hero elements
 

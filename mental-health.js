@@ -6,7 +6,7 @@
 'use strict';
 
 /* ── CONSTANTS ─────────────────────────────────────────────── */
-const STORAGE_KEY = 'viwell_assessment_progress';
+const STORAGE_KEY = 'vi-check_assessment_progress';
 const TOTAL_SCREENS = 6;
 
 /* ── PROFESSIONAL DATA ─────────────────────────────────────── */
